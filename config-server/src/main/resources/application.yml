@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #Git仓库，在公司里，配置仓储应该独立，与代码仓库分开
+          uri: https://github.com/Peishujuan/peishujuan-springcloud-demo3
+          search-paths:
+          - configfiles
+          #默认拉取配置Git分支
+          default-label: master
+          #如果你的Git不公开的，需要设置用户名和密码
+          #username: zhangsan
+          #password: 123456
+      #从哪个分支去拉去配置文件
+      label: spring-cloud-config
+server:
+  port: 8888
+  #给配置中心统一加访问前缀，在网关配置路由
+#  servlet:
+#    context-path: /config/
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
