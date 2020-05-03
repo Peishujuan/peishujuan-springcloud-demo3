@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * order服务调用了user服务，如果其他的微服务也需要调用用户服务，
  * 那么它也要创建feignClient相关接口，
  * 其实我们把UserFeignClient放到接口工程中，
- * 这样其他微服务在调用用户服务的时候，就不用再重写UserFeignClient了。
+ * 这样其他微服务在调用用户服务的时候，就不用再重写UserFeignClient了。。
  */
 @FeignClient(name = "service-user",fallback = UserFeignFallback.class)
 @Component
