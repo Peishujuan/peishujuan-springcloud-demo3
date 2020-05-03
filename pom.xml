@@ -16,8 +16,8 @@
         <module>service-user</module>
         <module>service-order</module>
         <module>zuul-gateway</module>
-        <module>hystrix-dashboard</module>
         <module>cloud-gateway</module>
+        <module>jpa-demo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
